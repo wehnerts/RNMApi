@@ -4,7 +4,7 @@ import './App.css';
 import Title from "./Components/Title";
 import GalleryBoard from "./Components/GalleryBoard";
 
-/*
+
 const characters = [
     {
         "id": 1,
@@ -1131,14 +1131,17 @@ const characters = [
         "created": "2017-11-05T10:02:26.701Z"
     }
 ]
-*/
+
 
 export default function App() {
   return (
     <div className="App">
       <Title />
-        <GalleryBoard />
+        <GalleryBoard characters={characters}/>
+
     </div>
   );
 }
+
+/*<GalleryBoard character={characters}/>*/
 
