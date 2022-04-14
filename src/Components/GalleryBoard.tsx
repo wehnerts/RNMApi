@@ -1,5 +1,6 @@
 import {Character} from "../Model/Character";
 import CharacterCard from "./CharacterCard";
+import './GalleryBoard.css';
 
 type GalleryBoardProps = {
     characters : Character[]
@@ -7,7 +8,7 @@ type GalleryBoardProps = {
 }
 
 export default function GalleryBoard({characters}: GalleryBoardProps){
-    return <div>{characters.map(characters => <CharacterCard character={characters} />)}</div>
+    return <div className={"GalleryBoard"}>{characters.map(characters => <div className={"BoardItem"}><CharacterCard character={characters} /></div>)}</div>
 
 }
 

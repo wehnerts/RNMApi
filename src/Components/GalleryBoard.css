@@ -1,0 +1,11 @@
+.GalleryBoard{
+   display: flex;
+   flex-direction: row ;
+   flex-wrap: wrap;
+   justify-content: space-around;
+
+}
+.BoardItem{
+   margin: 20px 3px 10px 3px;
+   width: 20%;
+}

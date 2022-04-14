@@ -1,4 +1,5 @@
 import {Character} from "../Model/Character";
+import './CharacterCard.css'
 
 type characterCardProps ={
     character: Character
@@ -8,11 +9,13 @@ type characterCardProps ={
 
 
 export default function CharacterCard({character} :characterCardProps){
-    return<div>
+    return<div className={"CCard"}>
+        <div className={"CCHead"}>
         <div>{character.name}</div>
         <div>{character.id}</div>
-        <div><img src={character.image}/></div>
-        <div>{character.origin.name}</div>
+        </div>
+        <div className={"CCImage"}><img src={character.image}/></div>
+        <div className={"CCOrigin"}>{character.origin.name}</div>
     </div>
 
 }
