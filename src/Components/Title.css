@@ -1,0 +1,12 @@
+.Title{
+    color: #61dafb;
+
+    display: flex;
+    flex-direction: row ;
+    justify-content: center;
+    align-items: center;
+}
+.Title > img{
+    max-width: 150px;
+    max-height: 150px;
+}

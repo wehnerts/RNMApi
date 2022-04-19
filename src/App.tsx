@@ -5,7 +5,7 @@ import Title from "./Components/Title";
 import GalleryBoard from "./Components/GalleryBoard";
 
 
-const characters = [
+const charJson = [
     {
         "id": 1,
         "name": "Rick Sanchez",
@@ -159,13 +159,13 @@ const characters = [
         "gender": "Female",
         "origin": {
             "name": "Earth (Replacement Dimension)",
-            "url": "https://rickandmortyapi.com/api/location/20"
+            "url": ""
         },
         "location": {
             "name": "Earth (Replacement Dimension)",
             "url": "https://rickandmortyapi.com/api/location/20"
         },
-        "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+        "image": "https://c.neh.tw/thumb/f/720/comdlpng6967371.jpg",
         "episode": [
             "https://rickandmortyapi.com/api/episode/6",
             "https://rickandmortyapi.com/api/episode/7",
@@ -1137,7 +1137,7 @@ export default function App() {
   return (
     <div className="App">
       <Title />
-        <GalleryBoard characters={characters}/>
+        <GalleryBoard gallyBoardProp={charJson} />
 
     </div>
   );
