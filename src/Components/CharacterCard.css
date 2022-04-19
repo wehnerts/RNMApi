@@ -2,12 +2,14 @@
     border-color: #292a3f;
     width: 100%;
     height: 100%;
-    background-color: #46586b;
+    background-color: #395265;
     color: #61dafb;
     border-style: wave;
     border-radius: 15px;
-    border: #61dafb;
-
+    box-suppress: hide;
+    box-shadow: 0 0 10px #9ecaed;
+    box-shadow: 7px 7px 15px 2px #66a2a6;
+    -moz-box-align: center;
 }
 
 
