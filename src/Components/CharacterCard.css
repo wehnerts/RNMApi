@@ -3,7 +3,7 @@
     width: 100%;
     height: 100%;
     background-color: #395265;
-    color: #61dafb;
+    color: #65a1a6;
     border-style: wave;
     border-radius: 15px;
     box-suppress: hide;
@@ -20,11 +20,11 @@
 
 }
 .CCHead div:last-child{
-    color: #61dafb;
+    color: #65a1a6;
     margin-left: 4px;
 }
 .CCHead div:first-child{
-    color: #d000ff;
+    color: rgba(243, 243, 244, 0.38);
     ;
 }
 

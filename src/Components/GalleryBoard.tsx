@@ -26,7 +26,7 @@ export default function GalleryBoard({gallyBoardProp}: GalleryBoardProps){
         <p>Filter:</p>
         <input onChange={onTextChange}/><button onClick={onButtonClick}>Click me!</button>
             <div className={"GalleryBoard"}>{gallyBoardProp.filter(character=> character.name.includes(finalFilter)).map(gallyBoardProp =>
-            <div className={"BoardItem"}><CharacterCard character={gallyBoardProp} /></div>)}</div>
+            <div key={gallyBoardProp.id} className={"BoardItem"}><CharacterCard character={gallyBoardProp} /></div>)}</div>
     </div>
 
 }
