@@ -1,20 +1,11 @@
 import {useParams} from "react-router-dom";
 import "./CharacterDetail.css"
-import {useEffect, useState} from "react";
-import axios from "axios";
-import {Character} from "../Model/Character";
+import useCharacter from "../hooks/useCharacter";
 export default function CharacterDetail() {
     const params = useParams()
     const id = params.id
-    const [character, setCharacter] = useState<Character>()
-    //Hole das Character JSOn und filtere nach
+    const {character, setCharacter} = useCharacter(id)
 
-    useEffect(() =>{
-        axios.get('https://rickandmortyapi.com/api/character/'+id)
-            .then(response => response.data)
-            .then(body => setCharacter(body))
-
-    },[])
     console.log(character)
     if (character===undefined){
         return <div>Character not found!</div>

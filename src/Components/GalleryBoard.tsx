@@ -4,11 +4,11 @@ import './GalleryBoard.css';
 import {ChangeEvent, useState} from "react";
 
 type GalleryBoardProps = {
-    gallyBoardProp : Character[]
+    gallyBoardProps : Character[]
 
 }
 
-export default function GalleryBoard({gallyBoardProp}: GalleryBoardProps){
+export default function GalleryBoard({gallyBoardProps}: GalleryBoardProps){
 
     const [filter, setFilter] = useState<string>("")
     const [finalFilter , setFinalFilter] = useState<string>("")
@@ -25,17 +25,9 @@ export default function GalleryBoard({gallyBoardProp}: GalleryBoardProps){
     return <div>
         <p>Filter:</p>
         <input onChange={onTextChange}/><button onClick={onButtonClick}>Click me!</button>
-            <div className={"GalleryBoard"}>{gallyBoardProp.filter(character=> character.name.includes(finalFilter)).map(gallyBoardProp =>
+            <div className={"GalleryBoard"}>{gallyBoardProps.filter(character=> character.name.includes(finalFilter)).map(gallyBoardProp =>
             <div key={gallyBoardProp.id} className={"BoardItem"}><CharacterCard character={gallyBoardProp} /></div>)}</div>
     </div>
 
 }
-//characters.map(characters => <div className={"BoardItem"}><CharacterCard character={characters}
-// export default function GalleryBoard(){
-//     return <div><CharacterCard /></div>
-//
-// }
 
-//-Erstellung GalleryBoard
-//-Soll CharactersCards darstellen
-//-Bekommt Liste mit Character
